@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>sample title</title>
+
+    <script src = "cescript_illusions.js"> </script>
+    <link rel="stylesheet" type="text/css" href="cescript_illusions.css">
+
+</head>
+<body>
+    <p> Helloe </p>
+    <canvas height="250" id="car_ill_can" width="620"></canvas>
+
+    <canvas height="320" id="zar_ill_can" width="620"></canvas>
+
+    <canvas height="150" id="ball_ill_can" width="620"></canvas>
+
+    <script>
+    var canvasCar = document.getElementById("car_ill_can");
+    var canvasCarshapes = [];
+    var shapeCar = new RectObj(32,135,200,110, "rgba(0,0,0,.3)", "red");
+    canvasCarshapes.push(shapeCar);
+    check_clicksoncanvas(canvasCar , canvasCarshapes);
+
+    var canvasZar = document.getElementById("zar_ill_can");
+    var canvasZarshapes = [];
+    var shapeZar = new RectObj(15,10,100,300, "#7b7c7e", "#7b7c7e");
+    canvasZarshapes.push(shapeZar);
+    check_clicksoncanvas(canvasZar , canvasZarshapes);
+
+    var sx = 60;
+    var sy = 50;
+    var canvasBall= document.getElementById("ball_ill_can");
+    var color1 = ["#995511","#226699","#557755","#bbcbcb","#447777","#cbaa33","#881155","#44aa44"];
+    var color2 = ["#cc7733","#88aaff","#557755","#ddeeee","#6699aa","#efcf54","#ba3288","#66ee66"];
+    var shapes = [];
+    for(var i=0;  i < 4; i++) {
+        for(var j=0; j < 2; j++) {
+            var idx = i*2+j;
+            shapes[idx + 0] = new BallObj(sx*(i+1), sy*(j+1), 20, color1[idx]);
+            shapes[idx + 8] = new BallObj(sx*(i+1) + 320, sy*(j+1), 20, color2[idx]);
+        }
+    }
+    /*
+    shapes[0]  = new BallObj(70,70,  20,"#995511");
+    shapes[1]  = new BallObj(70,140, 20,"#226699");
+    shapes[2]  = new BallObj(140,70, 20,"#557755");
+    shapes[3]  = new BallObj(140,140,20,"#bbcbcb");
+    shapes[4]  = new BallObj(210,70, 20,"#447777");
+    shapes[5]  = new BallObj(210,140,20,"#cbaa33");
+    shapes[6]  = new BallObj(390,70, 20,"#cc7733");
+    shapes[7]  = new BallObj(390,140,20,"#88aaff");
+
+    shapes[8]  = new BallObj(390,70, 20,"#cc7733");
+    shapes[9]  = new BallObj(390,140,20,"#88aaff");
+    shapes[10]  = new BallObj(460,70, 20,"#557755");
+    shapes[11]  = new BallObj(460,140,20,"#ddeeee");
+    shapes[12] = new BallObj(530,70, 20,"#6699aa");
+    shapes[13] = new BallObj(530,140,20,"#efcf54");
+    */
+    check_clicksoncanvas(canvasBall, shapes);
+
+    //control_canvas(canvasZar, shapeCar);
+    //control_canvas(canvasCar, shapeZar);
+
+
+    </script>
+</body>
+</html>
