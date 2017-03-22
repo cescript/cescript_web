@@ -18,8 +18,6 @@ class BallObj {
     }
     isPointIn(x,y) {
         var rr = (x-this.centerx)*(x-this.centerx) + (y-this.centery)*(y-this.centery);
-        console.log([this.centerx, this.centery]);
-        console.log([x,y]);
         if( rr < this.radius*this.radius ) {
             return true;
         } else {
