@@ -8,7 +8,6 @@
     display: block;
     position: relative;
 }
-
 #zar_ill_can {
     background:url('shadow.png');
     border:1px solid black;
@@ -19,7 +18,6 @@
     display: block;
     position: relative;
 }
-
 #ball_ill_can {
     background:url('color_illusion.png');
     border:1px solid black;
